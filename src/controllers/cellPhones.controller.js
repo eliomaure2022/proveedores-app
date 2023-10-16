@@ -1,4 +1,4 @@
-const CellPhonesServices = require("../services/cellPhones.services");
+const CellPhonesServices = require("../services/cellphones.services");
 
 const addCell = async (req, res) => {
   try {
