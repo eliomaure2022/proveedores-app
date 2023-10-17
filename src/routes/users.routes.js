@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { register } = require("../controllers/users.controller");
+const { register, getUsers } = require("../controllers/users.controller");
 
 const router = Router();
 /**
@@ -29,5 +29,6 @@ const router = Router();
  */
 
 router.post("/", register);
+router.get("/", getUsers);
 
 module.exports = router;

@@ -12,4 +12,13 @@ const register = async (req, res) => {
   }
 };
 
-module.exports = { register };
+const getUsers = async (req, res) => {
+  try {
+    const result = await UsersServices.getAll();
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(400).json(error.message);
+  }
+};
+
+module.exports = { register, getUsers };
