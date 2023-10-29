@@ -18,7 +18,7 @@ const register = async (req, res) => {
     }
   } catch (error) {
     console.error("Error:", error);
-    unhandleRejections.emit("unhandledRejection", error);
+    unhandledRejections.emit("unhandledRejection", error);
   }
 };
 
